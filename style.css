@@ -142,3 +142,26 @@ h2.titulo span{
     margin: 15px 0;
     color: #fff;
 }
+
+section.sobre {
+    padding:40px 4% ;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #4e0d5c;
+    display: block;
+}
