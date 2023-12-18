@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
+<head> <script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),gform.hooks[o][n].push({tag:i,callable:r,priority:t=null==t?10:t})},doHook:function(n,o,r){var t;if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[n][o]&&((o=gform.hooks[n][o]).sort(function(o,n){return o.priority-n.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==n?t.apply(null,r):r[0]=t.apply(null,r)})),"filter"==n)return r[0]},removeHook:function(o,n,t,i){var r;null!=gform.hooks[o][n]&&(r=(r=gform.hooks[o][n]).filter(function(o,n,r){return!!(null!=i&&i!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][n]=r)}});
+</script>
+<meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://pmoraisdev.com.br/xmlrpc.php" />
+	
+<!-- Otimização de mecanismos de pesquisa feita por Rank Math PRO - https://s.rankmath.com/home -->
+<title>Criação de Landing Pages de Alta Conversão - PMoraisDev</title>
+<meta name="description" content="Venda seu curso, infoproduto ou serviço com um landing page de qualidade, rápida e com chamadas de qualidade."/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://pmoraisdev.com.br/criacao-de-landing-pages-de-alta-conversao/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Criação de Landing Pages de Alta Conversão - PMoraisDev" />
+<meta property="og:description" content="Venda seu curso, infoproduto ou serviço com um landing page de qualidade, rápida e com chamadas de qualidade." />
+<meta property="og:url" content="https://pmoraisdev.com.br/criacao-de-landing-pages-de-alta-conversao/" />
+<meta property="og:site_name" content="PMorais Desenvolvedor - Criação de Websites" />
+<meta property="og:updated_time" content="2023-11-22T20:32:08-03:00" />
+<meta property="og:image" content="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-854x1024.jpg" />
+<meta property="og:image:secure_url" content="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-854x1024.jpg" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="959" />
+<meta property="og:image:alt" content="Criação de Landing Pages de Alta Conversão" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2022-11-10T13:13:34-03:00" />
+<meta property="article:modified_time" content="2023-11-22T20:32:08-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Criação de Landing Pages de Alta Conversão - PMoraisDev" />
+<meta name="twitter:description" content="Venda seu curso, infoproduto ou serviço com um landing page de qualidade, rápida e com chamadas de qualidade." />
+<meta name="twitter:image" content="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-854x1024.jpg" />
+<meta name="twitter:label1" content="Time to read" />
+<meta name="twitter:data1" content="1 minuto" />
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://pmoraisdev.com.br/#person","name":"PMorais Desenvolvedor - Cria\u00e7\u00e3o de Websites","logo":{"@type":"ImageObject","@id":"https://pmoraisdev.com.br/#logo","url":"https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-PRETA.png","contentUrl":"https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-PRETA.png","caption":"PMorais Desenvolvedor - Cria\u00e7\u00e3o de Websites","inLanguage":"pt-BR","width":"500","height":"500"},"image":{"@type":"ImageObject","@id":"https://pmoraisdev.com.br/#logo","url":"https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-PRETA.png","contentUrl":"https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-PRETA.png","caption":"PMorais Desenvolvedor - Cria\u00e7\u00e3o de Websites","inLanguage":"pt-BR","width":"500","height":"500"}},{"@type":"WebSite","@id":"https://pmoraisdev.com.br/#website","url":"https://pmoraisdev.com.br","name":"PMorais Desenvolvedor - Cria\u00e7\u00e3o de Websites","alternateName":"PMorais Dev - Cria\u00e7\u00e3o de Websites","publisher":{"@id":"https://pmoraisdev.com.br/#person"},"inLanguage":"pt-BR"},{"@type":"ImageObject","@id":"https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1.jpg","url":"https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1.jpg","width":"200","height":"200","inLanguage":"pt-BR"},{"@type":"WebPage","@id":"https://pmoraisdev.com.br/criacao-de-landing-pages-de-alta-conversao/#webpage","url":"https://pmoraisdev.com.br/criacao-de-landing-pages-de-alta-conversao/","name":"Cria\u00e7\u00e3o de Landing Pages de Alta Convers\u00e3o - PMoraisDev","datePublished":"2022-11-10T13:13:34-03:00","dateModified":"2023-11-22T20:32:08-03:00","isPartOf":{"@id":"https://pmoraisdev.com.br/#website"},"primaryImageOfPage":{"@id":"https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1.jpg"},"inLanguage":"pt-BR"},{"@type":"Person","@id":"https://pmoraisdev.com.br/author/desenvolvimento/","name":"admin","url":"https://pmoraisdev.com.br/author/desenvolvimento/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/cf4cd85c16fdd127cf4e3404c6387c9e?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/cf4cd85c16fdd127cf4e3404c6387c9e?s=96&amp;d=mm&amp;r=g","caption":"admin","inLanguage":"pt-BR"},"sameAs":["https://pmoraisdev.com.br"]},{"@type":"Article","headline":"Cria\u00e7\u00e3o de Landing Pages de Alta Convers\u00e3o - PMoraisDev","datePublished":"2022-11-10T13:13:34-03:00","dateModified":"2023-11-22T20:32:08-03:00","author":{"@id":"https://pmoraisdev.com.br/author/desenvolvimento/"},"publisher":{"@id":"https://pmoraisdev.com.br/#person"},"description":"Venda seu curso, infoproduto ou servi\u00e7o com um landing page de qualidade, r\u00e1pida e com chamadas de qualidade.","name":"Cria\u00e7\u00e3o de Landing Pages de Alta Convers\u00e3o - PMoraisDev","@id":"https://pmoraisdev.com.br/criacao-de-landing-pages-de-alta-conversao/#richSnippet","isPartOf":{"@id":"https://pmoraisdev.com.br/criacao-de-landing-pages-de-alta-conversao/#webpage"},"image":{"@id":"https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1.jpg"},"inLanguage":"pt-BR","mainEntityOfPage":{"@id":"https://pmoraisdev.com.br/criacao-de-landing-pages-de-alta-conversao/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<script type="rocketlazyloadscript" data-rocket-type='application/javascript'>console.log('PixelYourSite PRO version 9.2.0');</script>
+<link rel="alternate" type="application/rss+xml" title="Feed para PMoraisDev &raquo;" href="https://pmoraisdev.com.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para PMoraisDev &raquo;" href="https://pmoraisdev.com.br/comments/feed/" />
+<script type="rocketlazyloadscript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/pmoraisdev.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link data-minify="1" rel='stylesheet' id='upk-site-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/ultimate-post-kit/assets/css/upk-site.css?ver=1682345294' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://pmoraisdev.com.br/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://pmoraisdev.com.br/wp-includes/css/classic-themes.min.css?ver=1' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='hfe-style-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1682345294' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=1682345294' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://pmoraisdev.com.br/wp-content/uploads/elementor/css/custom-frontend-lite.min.css?ver=1675191160' media='all' />
+<link rel='stylesheet' id='elementor-post-6-css' href='https://pmoraisdev.com.br/wp-content/uploads/elementor/css/post-6.css?ver=1675191160' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='https://pmoraisdev.com.br/wp-content/uploads/elementor/css/custom-pro-frontend-lite.min.css?ver=1675191160' media='all' />
+<link rel='stylesheet' id='elementor-global-css' href='https://pmoraisdev.com.br/wp-content/uploads/elementor/css/global.css?ver=1675191161' media='all' />
+<link rel='stylesheet' id='elementor-post-319-css' href='https://pmoraisdev.com.br/wp-content/uploads/elementor/css/post-319.css?ver=1700696020' media='all' />
+<link data-minify="1" rel='stylesheet' id='hfe-widgets-style-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1682345294' media='all' />
+<link rel='stylesheet' id='elementor-post-49-css' href='https://pmoraisdev.com.br/wp-content/uploads/elementor/css/post-49.css?ver=1698862478' media='all' />
+<link rel='stylesheet' id='elementor-post-124-css' href='https://pmoraisdev.com.br/wp-content/uploads/elementor/css/post-124.css?ver=1676244068' media='all' />
+<link rel='stylesheet' id='hello-elementor-css' href='https://pmoraisdev.com.br/wp-content/themes/hello-elementor/style.min.css?ver=2.6.1' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://pmoraisdev.com.br/wp-content/themes/hello-elementor/theme.min.css?ver=2.6.1' media='all' />
+<link data-minify="1" rel='stylesheet' id='gform_basic-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=1682345322' media='all' />
+<link rel='stylesheet' id='gform_theme_components-css' href='https://pmoraisdev.com.br/wp-content/plugins/gravityforms/assets/css/dist/theme-components.min.css?ver=2.6.9' media='all' />
+<link rel='stylesheet' id='gform_theme_ie11-css' href='https://pmoraisdev.com.br/wp-content/plugins/gravityforms/assets/css/dist/theme-ie11.min.css?ver=2.6.9' media='all' />
+<link rel='stylesheet' id='gform_theme-css' href='https://pmoraisdev.com.br/wp-content/plugins/gravityforms/assets/css/dist/theme.min.css?ver=2.6.9' media='all' />
+<link data-minify="1" rel='stylesheet' id='wws-public-style-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/wordpress-whatsapp-support/assets/css/wws-public-style.css?ver=1682345294' media='all' />
+<style id='wws-public-style-inline-css'>
+.wws--bg-color {
+			background-color: #22c15e;
+		}.wws--text-color {
+				color: #ffffff;
+		}.wws-popup__open-btn {
+				padding: 8px 20px;
+				border-radius: 20px;
+				display: inline-block;
+				margin-top: 15px;
+				cursor: pointer;
+			}.wws-popup-container--position {
+					right: 12px;
+					bottom: 12px;
+				}
+				.wws-popup__open-btn { float: right; }
+				.wws-gradient--position {
+				  bottom: 0;
+				  right: 0;
+				  background: radial-gradient(ellipse at bottom right, rgba(29, 39, 54, 0.2) 0, rgba(29, 39, 54, 0) 72%);
+				}
+</style>
+<link data-minify="1" rel='stylesheet' id='wws-public-template-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/wordpress-whatsapp-support/assets/css/wws-public-template-1.css?ver=1682345294' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CHind%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.1.1' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://pmoraisdev.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=1682345294' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-regular-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=1682345294' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=1682345294' media='all' />
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/pixelyoursite-pro/dist/scripts/js.cookie-2.1.3.min.js?ver=2.1.3' id='js-cookie-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/pixelyoursite-pro/dist/scripts/jquery.bind-first-0.2.3.min.js?ver=6.1.1' id='jquery-bind-first-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/pixelyoursite-pro/dist/scripts/vimeo.min.js?ver=6.1.1' id='vimeo-js' defer></script>
+<script id='pys-js-extra'>
+var pysOptions = {"staticEvents":[],"dynamicEvents":[],"triggerEvents":[],"triggerEventTypes":[],"ga":{"trackingIds":["G-7R8RYBHGMP"],"enhanceLinkAttr":false,"anonimizeIP":false,"retargetingLogic":"ecomm","crossDomainEnabled":false,"crossDomainAcceptIncoming":false,"crossDomainDomains":[],"wooVariableAsSimple":true,"isDebugEnabled":[false],"disableAdvertisingFeatures":false,"disableAdvertisingPersonalization":false},"debug":"","siteUrl":"https:\/\/pmoraisdev.com.br","ajaxUrl":"https:\/\/pmoraisdev.com.br\/wp-admin\/admin-ajax.php","trackUTMs":"1","trackTrafficSource":"1","user_id":"0","enable_lading_page_param":"1","cookie_duration":"7","enable_event_day_param":"1","enable_event_month_param":"1","enable_event_time_param":"1","enable_remove_target_url_param":"1","enable_remove_download_url_param":"1","visit_data_model":"first_visit","gdpr":{"ajax_enabled":false,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"tiktok_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"facebook_prior_consent_enabled":true,"tiktok_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":true,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_google_ads_consent_category":"marketing","cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":false,"real_cookie_banner_integration_enabled":false,"consent_magic_integration_enabled":false},"automatic":{"enable_youtube":true,"enable_vimeo":true,"enable_video":true},"woo":{"enabled":false},"edd":{"enabled":false}};
+</script>
+<script type="rocketlazyloadscript" data-minify="1" src='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/pixelyoursite-pro/dist/scripts/public.js?ver=1682345294' id='pys-js' defer></script>
+<script type="rocketlazyloadscript" defer='defer' src='https://pmoraisdev.com.br/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.6.9' id='gform_json-js'></script>
+<script id='gform_gravityforms-js-extra'>
+var gf_global = {"gf_currency_config":{"name":"D\u00f3lar americano","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/pmoraisdev.com.br\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/pmoraisdev.com.br\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","strings":{"newRowAdded":"Nova linha adicionada.","rowRemoved":"Linha removida","formSaved":"O formul\u00e1rio foi salvo. O conte\u00fado cont\u00e9m o link para retornar e preencher o formul\u00e1rio."}};
+var gform_i18n = {"datepicker":{"days":{"monday":"Mon","tuesday":"Tue","wednesday":"Wed","thursday":"Thu","friday":"Fri","saturday":"Sat","sunday":"Sun"},"months":{"january":"janeiro","february":"fevereiro","march":"mar\u00e7o","april":"abril","may":"maio","june":"junho","july":"julho","august":"agosto","september":"setembro","october":"outubro","november":"novembro","december":"dezembro"},"firstDay":1,"iconText":"Selecione uma data"}};
+var gf_legacy_multi = {"1":""};
+var gform_gravityforms = {"strings":{"invalid_file_extension":"Este tipo de arquivo n\u00e3o \u00e9 permitido. Deve ser um dos seguintes:","delete_file":"Excluir este arquivo","in_progress":"em progresso","file_exceeds_limit":"O arquivo excede o limite de tamanho.","illegal_extension":"Este tipo de arquivo n\u00e3o \u00e9 permitido.","max_reached":"O n\u00famero m\u00e1ximo arquivos permitidos foi atingido.","unknown_error":"Ocorreu um erro ao salvar o arquivo no servidor","currently_uploading":"Aguarde o envio ser completado","cancel":"Cancelar","cancel_upload":"Cancelar este envio","cancelled":"Cancelado"},"vars":{"images_url":"https:\/\/pmoraisdev.com.br\/wp-content\/plugins\/gravityforms\/images"}};
+</script>
+<script type="rocketlazyloadscript" id='gform_gravityforms-js-before'>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),gform.hooks[o][n].push({tag:i,callable:r,priority:t=null==t?10:t})},doHook:function(n,o,r){var t;if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[n][o]&&((o=gform.hooks[n][o]).sort(function(o,n){return o.priority-n.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==n?t.apply(null,r):r[0]=t.apply(null,r)})),"filter"==n)return r[0]},removeHook:function(o,n,t,i){var r;null!=gform.hooks[o][n]&&(r=(r=gform.hooks[o][n]).filter(function(o,n,r){return!!(null!=i&&i!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][n]=r)}});
+</script>
+<script type="rocketlazyloadscript" defer='defer' src='https://pmoraisdev.com.br/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.6.9' id='gform_gravityforms-js'></script>
+<link rel="https://api.w.org/" href="https://pmoraisdev.com.br/wp-json/" /><link rel="alternate" type="application/json" href="https://pmoraisdev.com.br/wp-json/wp/v2/pages/319" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pmoraisdev.com.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://pmoraisdev.com.br/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.1.1" />
+<link rel='shortlink' href='https://pmoraisdev.com.br/?p=319' />
+<link rel="alternate" type="application/json+oembed" href="https://pmoraisdev.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpmoraisdev.com.br%2Fcriacao-de-landing-pages-de-alta-conversao%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://pmoraisdev.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpmoraisdev.com.br%2Fcriacao-de-landing-pages-de-alta-conversao%2F&#038;format=xml" />
+<link rel="icon" href="https://pmoraisdev.com.br/wp-content/uploads/2023/02/cropped-Fav-Icon-PMDEv-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://pmoraisdev.com.br/wp-content/uploads/2023/02/cropped-Fav-Icon-PMDEv-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://pmoraisdev.com.br/wp-content/uploads/2023/02/cropped-Fav-Icon-PMDEv-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://pmoraisdev.com.br/wp-content/uploads/2023/02/cropped-Fav-Icon-PMDEv-270x270.jpg" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body class="page-template page-template-elementor_header_footer page page-id-319 wp-custom-logo ehf-header ehf-footer ehf-template-hello-elementor ehf-stylesheet-hello-elementor elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-319">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><div id="page" class="hfeed site">
+
+		<header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+			<p class="main-title bhf-hidden" itemprop="headline"><a href="https://pmoraisdev.com.br" title="PMoraisDev" rel="home">PMoraisDev</a></p>
+					<div data-elementor-type="wp-post" data-elementor-id="49" class="elementor elementor-49">
+							<div class="elementor-element elementor-element-bf5bda6 e-con-full e-con" data-id="bf5bda6" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-14640ec elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="14640ec" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.10.2 - 29-01-2023 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>													<a href="https://pmoraisdev.com.br">
+							<img width="250" height="250" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20250%20250'%3E%3C/svg%3E" class="attachment-full size-full wp-image-7" alt="Logo do Site" data-lazy-srcset="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-AZUL_compressed.png 250w, https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-AZUL_compressed-150x150.png 150w" data-lazy-sizes="(max-width: 250px) 100vw, 250px" data-lazy-src="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-AZUL_compressed.png" /><noscript><img width="250" height="250" src="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-AZUL_compressed.png" class="attachment-full size-full wp-image-7" alt="Logo do Site" srcset="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-AZUL_compressed.png 250w, https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-AZUL_compressed-150x150.png 150w" sizes="(max-width: 250px) 100vw, 250px" /></noscript>								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-6721e6f hfe-nav-menu__align-center hfe-nav-menu__breakpoint-mobile hfe-submenu-animation-slide_up elementor-widget-mobile__width-initial hfe-submenu-icon-arrow hfe-link-redirect-child elementor-widget elementor-widget-navigation-menu" data-id="6721e6f" data-element_type="widget" data-settings="{&quot;padding_horizontal_menu_item&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;padding_horizontal_menu_item_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;padding_vertical_menu_item&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:16,&quot;sizes&quot;:[]},&quot;padding_vertical_menu_item_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:12,&quot;sizes&quot;:[]},&quot;menu_space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:15,&quot;sizes&quot;:[]},&quot;width_dropdown_item_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:16,&quot;sizes&quot;:[]},&quot;padding_horizontal_dropdown_item_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:29,&quot;sizes&quot;:[]},&quot;padding_vertical_dropdown_item_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:17,&quot;sizes&quot;:[]},&quot;distance_from_menu_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:44,&quot;sizes&quot;:[]},&quot;toggle_size_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:27,&quot;sizes&quot;:[]},&quot;toggle_border_width_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;toggle_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;padding_horizontal_menu_item_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:17,&quot;sizes&quot;:[]},&quot;padding_vertical_menu_item_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:14,&quot;sizes&quot;:[]},&quot;padding_horizontal_menu_item_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_vertical_menu_item_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_space_between_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_row_space&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_row_space_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_row_space_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_row_space_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;dropdown_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;dropdown_border_radius_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;dropdown_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;dropdown_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;width_dropdown_item&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;220&quot;,&quot;sizes&quot;:[]},&quot;width_dropdown_item_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;width_dropdown_item_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_horizontal_dropdown_item&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_horizontal_dropdown_item_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_horizontal_dropdown_item_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_vertical_dropdown_item&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:15,&quot;sizes&quot;:[]},&quot;padding_vertical_dropdown_item_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_vertical_dropdown_item_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;distance_from_menu&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;distance_from_menu_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;distance_from_menu_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_size&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_size_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_size_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_width&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_width_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_width_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_radius_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="navigation-menu.default">
+				<div class="elementor-widget-container">
+						<div class="hfe-nav-menu hfe-layout-horizontal hfe-nav-menu-layout horizontal hfe-pointer__underline hfe-animation__slide" data-layout="horizontal">
+				<div class="hfe-nav-menu__toggle elementor-clickable">
+					<div class="hfe-nav-menu-icon">
+						<i aria-hidden="true" tabindex="0" class="fas fa-align-justify"></i>					</div>
+				</div>
+				<nav class="hfe-nav-menu__layout-horizontal hfe-nav-menu__submenu-arrow" data-toggle-icon="&lt;i aria-hidden=&quot;true&quot; tabindex=&quot;0&quot; class=&quot;fas fa-align-justify&quot;&gt;&lt;/i&gt;" data-close-icon="&lt;i aria-hidden=&quot;true&quot; tabindex=&quot;0&quot; class=&quot;far fa-window-close&quot;&gt;&lt;/i&gt;" data-full-width="yes"><ul id="menu-1-6721e6f" class="hfe-nav-menu"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/criacao-de-ecommerce/" class = "hfe-menu-item">E-commerce</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item parent hfe-creative-menu"><a href="/criacao-de-landing-pages-de-alta-conversao/" class = "hfe-menu-item">Landing Pages</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/criacao-de-site-institucional/" class = "hfe-menu-item">Site Institucional</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/contato/" class = "hfe-menu-item">Contato</a></li>
+<li id="menu-item-1097" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="https://pmoraisdev.com.br/blog/" class = "hfe-menu-item">Blog</a></li>
+</ul></nav>              
+			</div>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-840ce94 elementor-grid-tablet-0 e-grid-align-tablet-center e-grid-align-mobile-left elementor-grid-laptop-1 e-grid-align-laptop-center elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="840ce94" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.10.2 - 29-01-2023 */
+.elementor-widget-social-icons.elementor-grid-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-mobile-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-tablet-0 .elementor-widget-container{line-height:1;font-size:0}.elementor-widget-social-icons:not(.elementor-grid-0):not(.elementor-grid-tablet-0):not(.elementor-grid-mobile-0) .elementor-grid{display:inline-grid}.elementor-widget-social-icons .elementor-grid{grid-column-gap:var(--grid-column-gap,5px);grid-row-gap:var(--grid-row-gap,5px);grid-template-columns:var(--grid-template-columns);justify-content:var(--justify-content,center);justify-items:var(--justify-content,center)}.elementor-icon.elementor-social-icon{font-size:var(--icon-size,25px);line-height:var(--icon-size,25px);width:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));height:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)))}.elementor-social-icon{--e-social-icon-icon-color:#fff;display:inline-flex;background-color:#818a91;align-items:center;justify-content:center;text-align:center;cursor:pointer}.elementor-social-icon i{color:var(--e-social-icon-icon-color)}.elementor-social-icon svg{fill:var(--e-social-icon-icon-color)}.elementor-social-icon:last-child{margin:0}.elementor-social-icon:hover{opacity:.9;color:#fff}.elementor-social-icon-android{background-color:#a4c639}.elementor-social-icon-apple{background-color:#999}.elementor-social-icon-behance{background-color:#1769ff}.elementor-social-icon-bitbucket{background-color:#205081}.elementor-social-icon-codepen{background-color:#000}.elementor-social-icon-delicious{background-color:#39f}.elementor-social-icon-deviantart{background-color:#05cc47}.elementor-social-icon-digg{background-color:#005be2}.elementor-social-icon-dribbble{background-color:#ea4c89}.elementor-social-icon-elementor{background-color:#d30c5c}.elementor-social-icon-envelope{background-color:#ea4335}.elementor-social-icon-facebook,.elementor-social-icon-facebook-f{background-color:#3b5998}.elementor-social-icon-flickr{background-color:#0063dc}.elementor-social-icon-foursquare{background-color:#2d5be3}.elementor-social-icon-free-code-camp,.elementor-social-icon-freecodecamp{background-color:#006400}.elementor-social-icon-github{background-color:#333}.elementor-social-icon-gitlab{background-color:#e24329}.elementor-social-icon-globe{background-color:#818a91}.elementor-social-icon-google-plus,.elementor-social-icon-google-plus-g{background-color:#dd4b39}.elementor-social-icon-houzz{background-color:#7ac142}.elementor-social-icon-instagram{background-color:#262626}.elementor-social-icon-jsfiddle{background-color:#487aa2}.elementor-social-icon-link{background-color:#818a91}.elementor-social-icon-linkedin,.elementor-social-icon-linkedin-in{background-color:#0077b5}.elementor-social-icon-medium{background-color:#00ab6b}.elementor-social-icon-meetup{background-color:#ec1c40}.elementor-social-icon-mixcloud{background-color:#273a4b}.elementor-social-icon-odnoklassniki{background-color:#f4731c}.elementor-social-icon-pinterest{background-color:#bd081c}.elementor-social-icon-product-hunt{background-color:#da552f}.elementor-social-icon-reddit{background-color:#ff4500}.elementor-social-icon-rss{background-color:#f26522}.elementor-social-icon-shopping-cart{background-color:#4caf50}.elementor-social-icon-skype{background-color:#00aff0}.elementor-social-icon-slideshare{background-color:#0077b5}.elementor-social-icon-snapchat{background-color:#fffc00}.elementor-social-icon-soundcloud{background-color:#f80}.elementor-social-icon-spotify{background-color:#2ebd59}.elementor-social-icon-stack-overflow{background-color:#fe7a15}.elementor-social-icon-steam{background-color:#00adee}.elementor-social-icon-stumbleupon{background-color:#eb4924}.elementor-social-icon-telegram{background-color:#2ca5e0}.elementor-social-icon-thumb-tack{background-color:#1aa1d8}.elementor-social-icon-tripadvisor{background-color:#589442}.elementor-social-icon-tumblr{background-color:#35465c}.elementor-social-icon-twitch{background-color:#6441a5}.elementor-social-icon-twitter{background-color:#1da1f2}.elementor-social-icon-viber{background-color:#665cac}.elementor-social-icon-vimeo{background-color:#1ab7ea}.elementor-social-icon-vk{background-color:#45668e}.elementor-social-icon-weibo{background-color:#dd2430}.elementor-social-icon-weixin{background-color:#31a918}.elementor-social-icon-whatsapp{background-color:#25d366}.elementor-social-icon-wordpress{background-color:#21759b}.elementor-social-icon-xing{background-color:#026466}.elementor-social-icon-yelp{background-color:#af0606}.elementor-social-icon-youtube{background-color:#cd201f}.elementor-social-icon-500px{background-color:#0099e5}.elementor-shape-rounded .elementor-icon.elementor-social-icon{border-radius:10%}.elementor-shape-circle .elementor-icon.elementor-social-icon{border-radius:50%}</style>		<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-7590be6" href="https://www.instagram.com/pmoraisdev/" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<i class="fab fa-instagram"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-c034add" href="https://www.facebook.com/pmoraisdev" target="_blank">
+						<span class="elementor-screen-only">Facebook</span>
+						<i class="fab fa-facebook"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-whatsapp elementor-repeater-item-a1294e2" href="https://wa.me/5521993648826?text=Ol%C3%A1,%20Pedro!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20voc%C3%AA!" target="_blank">
+						<span class="elementor-screen-only">Whatsapp</span>
+						<i class="fab fa-whatsapp"></i>					</a>
+				</span>
+					</div>
+				</div>
+				</div>
+				</div>
+							</div>
+				</header>
+
+			<div data-elementor-type="wp-page" data-elementor-id="319" class="elementor elementor-319">
+							<div class="elementor-element elementor-element-a9f9ade e-con-boxed e-con" data-id="a9f9ade" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-ff39877 e-con-full e-con" data-id="ff39877" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-fe5a615 animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-id="fe5a615" data-element_type="widget" data-settings="{&quot;motion_fx_motion_fx_mouse&quot;:&quot;yes&quot;,&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.10.2 - 29-01-2023 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h1 class="elementor-heading-title elementor-size-default">CRIAÇÃO DE LANDING PAGE DE ALTA CONVERSÃO </h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-832afea elementor-align-center animated-fast elementor-invisible elementor-widget elementor-widget-button" data-id="832afea" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://wa.me/5521993648826?text=Olá,%20Pedro!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20você!" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">SOLICITAR ORÇAMENTO</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-30d9013 e-con-full elementor-invisible e-con" data-id="30d9013" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;content_width&quot;:&quot;full&quot;}">
+		<div class="elementor-element elementor-element-f4c4428 e-con-full e-con" data-id="f4c4428" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-22afbdc elementor-widget__width-auto elementor-widget elementor-widget-heading" data-id="22afbdc" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Confira Nossa Galeria de Landing Pages</h2>		</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-ae69c4f e-con-full e-con" data-id="ae69c4f" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-a74a565 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="a74a565" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.10.2 - 29-01-2023 */
+.elementor-widget-divider{--divider-border-style:none;--divider-border-width:1px;--divider-color:#2c2c2c;--divider-icon-size:20px;--divider-element-spacing:10px;--divider-pattern-height:24px;--divider-pattern-size:20px;--divider-pattern-url:none;--divider-pattern-repeat:repeat-x}.elementor-widget-divider .elementor-divider{display:flex}.elementor-widget-divider .elementor-divider__text{font-size:15px;line-height:1;max-width:95%}.elementor-widget-divider .elementor-divider__element{margin:0 var(--divider-element-spacing);flex-shrink:0}.elementor-widget-divider .elementor-icon{font-size:var(--divider-icon-size)}.elementor-widget-divider .elementor-divider-separator{display:flex;margin:0;direction:ltr}.elementor-widget-divider--view-line_icon .elementor-divider-separator,.elementor-widget-divider--view-line_text .elementor-divider-separator{align-items:center}.elementor-widget-divider--view-line_icon .elementor-divider-separator:after,.elementor-widget-divider--view-line_icon .elementor-divider-separator:before,.elementor-widget-divider--view-line_text .elementor-divider-separator:after,.elementor-widget-divider--view-line_text .elementor-divider-separator:before{display:block;content:"";border-bottom:0;flex-grow:1;border-top:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--element-align-left .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type{flex-grow:0;flex-shrink:100}.elementor-widget-divider--element-align-left .elementor-divider-separator:before{content:none}.elementor-widget-divider--element-align-left .elementor-divider__element{margin-left:0}.elementor-widget-divider--element-align-right .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type{flex-grow:0;flex-shrink:100}.elementor-widget-divider--element-align-right .elementor-divider-separator:after{content:none}.elementor-widget-divider--element-align-right .elementor-divider__element{margin-right:0}.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator{border-top:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--separator-type-pattern{--divider-border-style:none}.elementor-widget-divider--separator-type-pattern.elementor-widget-divider--view-line .elementor-divider-separator,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:after,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:before,.elementor-widget-divider--separator-type-pattern:not([class*=elementor-widget-divider--view]) .elementor-divider-separator{width:100%;min-height:var(--divider-pattern-height);-webkit-mask-size:var(--divider-pattern-size) 100%;mask-size:var(--divider-pattern-size) 100%;-webkit-mask-repeat:var(--divider-pattern-repeat);mask-repeat:var(--divider-pattern-repeat);background-color:var(--divider-color);-webkit-mask-image:var(--divider-pattern-url);mask-image:var(--divider-pattern-url)}.elementor-widget-divider--no-spacing{--divider-pattern-size:auto}.elementor-widget-divider--bg-round{--divider-pattern-repeat:round}.rtl .elementor-widget-divider .elementor-divider__text{direction:rtl}.e-con-inner>.elementor-widget-divider,.e-con>.elementor-widget-divider{width:var(--container-widget-width);--flex-grow:var(--container-widget-flex-grow)}</style>		<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-02fb340 e-con-boxed elementor-invisible e-con" data-id="02fb340" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-cd3cd9f e-con-full e-con" data-id="cd3cd9f" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-245c23e elementor-vertical-align-middle elementor-position-top elementor-widget elementor-widget-image-box" data-id="245c23e" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<style>.elementor-widget-image-box .elementor-image-box-content{width:100%}@media (min-width:768px){.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper,.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{display:flex}.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{text-align:right;flex-direction:row-reverse}.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper{text-align:left;flex-direction:row}.elementor-widget-image-box.elementor-position-top .elementor-image-box-img{margin:auto}.elementor-widget-image-box.elementor-vertical-align-top .elementor-image-box-wrapper{align-items:flex-start}.elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper{align-items:center}.elementor-widget-image-box.elementor-vertical-align-bottom .elementor-image-box-wrapper{align-items:flex-end}}@media (max-width:767px){.elementor-widget-image-box .elementor-image-box-img{margin-left:auto!important;margin-right:auto!important;margin-bottom:15px}}.elementor-widget-image-box .elementor-image-box-img{display:inline-block}.elementor-widget-image-box .elementor-image-box-title a{color:inherit}.elementor-widget-image-box .elementor-image-box-wrapper{text-align:center}.elementor-widget-image-box .elementor-image-box-description{margin:0}</style><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://pmoraisdev.com.br/modelo-landing-page-captura-de-leads/"><img decoding="async" width="1918" height="2300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201918%202300'%3E%3C/svg%3E" class="attachment-full size-full wp-image-904" alt="" data-lazy-srcset="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1.jpg 1918w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-250x300.jpg 250w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-854x1024.jpg 854w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-768x921.jpg 768w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-1281x1536.jpg 1281w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-1708x2048.jpg 1708w" data-lazy-sizes="(max-width: 1918px) 100vw, 1918px" data-lazy-src="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1.jpg" /><noscript><img decoding="async" width="1918" height="2300" src="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1.jpg" class="attachment-full size-full wp-image-904" alt="" srcset="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1.jpg 1918w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-250x300.jpg 250w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-854x1024.jpg 854w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-768x921.jpg 768w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-1281x1536.jpg 1281w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-captura-de-leads1-1708x2048.jpg 1708w" sizes="(max-width: 1918px) 100vw, 1918px" /></noscript></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a href="https://pmoraisdev.com.br/modelo-landing-page-captura-de-leads/">Captura de Leads + Obrigado</a></h3><p class="elementor-image-box-description">Capture e-mails, telefones, nomes de possiveis clientes. . Você quem manda! 
+<br>E você ainda recebe uma página de Obrigado <b>totalmente grátis!</b></p></div></div>		</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-fc2974e e-con-full e-con" data-id="fc2974e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-51b509e elementor-vertical-align-middle elementor-position-top elementor-widget elementor-widget-image-box" data-id="51b509e" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://pmoraisdev.com.br/modelo-landing-page-captura-de-leads/"><img decoding="async" width="1918" height="2300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201918%202300'%3E%3C/svg%3E" class="attachment-full size-full wp-image-903" alt="" data-lazy-srcset="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1.jpg 1918w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-250x300.jpg 250w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-854x1024.jpg 854w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-768x921.jpg 768w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-1281x1536.jpg 1281w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-1708x2048.jpg 1708w" data-lazy-sizes="(max-width: 1918px) 100vw, 1918px" data-lazy-src="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1.jpg" /><noscript><img decoding="async" width="1918" height="2300" src="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1.jpg" class="attachment-full size-full wp-image-903" alt="" srcset="https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1.jpg 1918w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-250x300.jpg 250w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-854x1024.jpg 854w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-768x921.jpg 768w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-1281x1536.jpg 1281w, https://pmoraisdev.com.br/wp-content/uploads/2022/11/landing-page-de-vendas1-1708x2048.jpg 1708w" sizes="(max-width: 1918px) 100vw, 1918px" /></noscript></a></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title"><a href="https://pmoraisdev.com.br/modelo-landing-page-captura-de-leads/">Vendas</a></h3><p class="elementor-image-box-description">Venda seu curso, infoproduto ou serviço com um landing page de qualidade, rápida e com chamadas de qualidade.</p></div></div>		</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-9ac7591 e-con-boxed elementor-invisible e-con" data-id="9ac7591" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-41d85fb e-con-full e-con" data-id="41d85fb" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-9141f42 elementor-align-center elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="9141f42" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://wa.me/5521993648826?text=Olá,%20Pedro!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20você!" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">SOLICITAR ORÇAMENTO</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-5f6eac1 e-con-full elementor-invisible e-con" data-id="5f6eac1" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;content_width&quot;:&quot;full&quot;}">
+		<div class="elementor-element elementor-element-c898be0 e-con-full e-con" data-id="c898be0" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-438cc7a elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="438cc7a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Para Que Uma Landing Page?</h2>		</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-a3aa745 e-con-full e-con" data-id="a3aa745" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-0a242bd elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="0a242bd" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-27f5a57 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="27f5a57" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7863a36" data-id="7863a36" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f75059c elementor-widget elementor-widget-text-editor" data-id="f75059c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.10.2 - 29-01-2023 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<p>A landing page é destacada do seu site e possui uma objetivo bem específico. Seja busca por leads ou venda de um produto. A landing page é importantíssima para garantir uma maior conversão de vendas. Nós queremos levar o usuário à um resultado específico, podendo ser a captação de leads ou que você consiga realizar uma venda de seu produto.</p><p>Uma página clara, concisa, bem feita e que cumpra o objetivo estabelecido podem alavancar muito o resultado que você busca.</p><p> </p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-8e72691 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="8e72691" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-36623ab" data-id="36623ab" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-a2ed856 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="a2ed856" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="https://pmoraisdev.com.br/wp-content/uploads/elementor/css/custom-widget-icon-box.min.css?ver=1675191320">		<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M3800 4955 l0 -85 147 0 148 0 -850 -850 -850 -850 -412 412 -413
+413 -525 -525 -525 -525 57 -57 58 -58 467 467 468 468 412 -413 413 -412 907
+907 908 908 0 -148 0 -147 85 0 85 0 0 290 0 290 -290 0 -290 0 0 -85z"/>
+<path d="M4130 2065 l0 -1815 -85 0 -85 0 0 1570 0 1570 -410 0 -410 0 0
+-1570 0 -1570 -85 0 -85 0 0 990 0 990 -410 0 -410 0 0 -990 0 -990 -85 0 -85
+0 0 1240 0 1240 -410 0 -410 0 0 -1240 0 -1240 -85 0 -85 0 0 575 0 575 -410
+0 -410 0 0 -575 0 -575 -85 0 -85 0 0 -85 0 -85 2560 0 2560 0 0 85 0 85 -85
+0 -85 0 0 1815 0 1815 -410 0 -410 0 0 -1815z m660 -80 l0 -1735 -250 0 -250
+0 0 1728 c0 951 3 1732 7 1735 3 4 116 7 250 7 l243 0 0 -1735z m-990 -250 l0
+-1485 -250 0 -250 0 0 1485 0 1485 250 0 250 0 0 -1485z m-1980 -330 l0 -1155
+-250 0 -250 0 0 1155 0 1155 250 0 250 0 0 -1155z m990 -250 l0 -905 -250 0
+-250 0 0 905 0 905 250 0 250 0 0 -905z m-1980 -410 l0 -495 -250 0 -250 0 0
+495 0 495 250 0 250 0 0 -495z"/>
+</g>
+</svg>
+				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span  >
+						Aumento de Conversão					</span>
+				</h3>
+									<p class="elementor-icon-box-description">
+						Com uma landing page bem organizada, você pode aumentar a sua taxa de conversão e realizar mais vendas!					</p>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-e282db6" data-id="e282db6" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-a92f003 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="a92f003" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M2312 5106 c-177 -45 -321 -187 -367 -363 -27 -103 -20 -155 76 -606
+51 -235 90 -430 87 -432 -3 -3 -25 4 -49 14 -59 26 -172 44 -234 36 -162 -20
+-295 -106 -382 -247 -36 -58 -46 -67 -58 -48 -11 18 -122 69 -182 85 -259 67
+-548 -115 -603 -379 -8 -37 -10 -299 -7 -872 3 -892 2 -871 63 -1082 228 -790
+1008 -1302 1821 -1197 372 49 692 206 958 470 214 213 356 447 435 718 61 210
+63 233 69 827 l6 545 288 910 c248 782 289 921 294 990 18 259 -166 486 -427
+526 -94 15 -203 -5 -298 -52 -71 -36 -160 -121 -201 -192 -15 -26 -113 -309
+-217 -627 -104 -319 -191 -580 -194 -580 -3 0 -68 271 -144 602 -76 331 -147
+626 -158 656 -44 119 -164 233 -295 282 -73 27 -207 35 -281 16z m235 -228
+c52 -24 107 -77 132 -127 14 -27 371 -1544 371 -1576 0 -3 -136 -4 -302 -3
+l-301 3 -150 685 c-164 756 -170 797 -128 880 75 146 236 205 378 138z m1583
+-103 c65 -23 125 -77 156 -142 54 -110 57 -95 -205 -928 l-234 -740 -58 57
+c-104 102 -232 148 -411 148 -43 0 -78 3 -78 7 0 16 465 1432 481 1463 24 48
+85 105 139 129 55 25 149 27 210 6z m-2170 -1246 c63 -19 131 -78 164 -142 23
+-45 30 -75 34 -136 l4 -79 -128 -4 c-112 -3 -136 -7 -184 -30 -73 -33 -135
+-98 -161 -168 -55 -144 13 -408 144 -557 33 -38 26 -41 -53 -17 -39 12 -66 29
+-105 68 -85 85 -86 91 -83 517 3 351 4 365 25 404 29 54 88 109 143 134 51 23
+141 28 200 10z m-762 -204 c60 -26 110 -73 141 -137 l31 -61 0 -355 c0 -235
+-4 -367 -11 -392 -19 -64 -78 -131 -144 -165 -50 -26 -69 -30 -129 -29 -42 1
+-86 8 -109 18 -54 24 -121 89 -149 144 -23 47 -23 49 -23 417 0 369 0 370 24
+415 74 141 230 203 369 145z m2370 -406 c64 -32 110 -79 140 -146 15 -35 17
+-90 17 -633 0 -673 -2 -702 -76 -925 -145 -437 -492 -784 -931 -929 -416 -137
+-883 -75 -1250 167 -371 244 -610 637 -658 1079 -10 99 -14 518 -5 518 3 0 28
+-11 55 -25 235 -119 522 -36 654 188 l38 67 27 -19 c44 -31 113 -63 166 -77
+80 -22 209 -17 288 10 l68 23 57 -20 c31 -11 96 -22 145 -25 48 -2 87 -7 87
+-9 0 -3 -36 -38 -80 -80 -186 -175 -297 -387 -335 -638 -20 -136 -20 -356 0
+-400 41 -84 160 -75 192 16 7 20 12 95 12 186 1 167 15 254 58 361 46 117 104
+203 198 297 154 154 326 235 542 256 64 6 117 16 131 25 60 40 60 137 -1 174
+-30 19 -53 20 -417 20 -310 0 -397 3 -443 15 -170 44 -305 178 -349 344 -25
+98 -23 143 8 180 l26 31 787 0 788 0 61 -31z"/>
+</g>
+</svg>
+				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span  >
+						Praticidade					</span>
+				</h3>
+									<p class="elementor-icon-box-description">
+						Por ser uma página única, não há complicações. As métricas são mais simples e seu manutenção é muito mais prática. 					</p>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-994102b" data-id="994102b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-de63e87 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="de63e87" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M2420 5114 c-322 -40 -591 -171 -815 -398 -199 -201 -313 -415 -372
+-696 -24 -118 -24 -382 0 -500 59 -281 174 -496 372 -696 201 -203 421 -322
+705 -381 117 -24 380 -24 502 0 270 54 494 174 694 372 202 199 322 421 381
+705 24 118 24 382 0 500 -39 185 -110 356 -212 510 -63 95 -258 291 -351 352
+-161 107 -335 180 -506 213 -81 16 -328 28 -398 19z m380 -322 c198 -52 365
+-146 501 -281 135 -135 226 -297 282 -501 29 -109 29 -371 0 -480 -56 -204
+-147 -366 -282 -501 -135 -135 -297 -226 -501 -282 -109 -29 -371 -29 -480 0
+-204 56 -366 147 -501 282 -386 387 -411 1000 -57 1421 153 182 404 323 638
+359 98 15 311 6 400 -17z"/>
+<path d="M2023 2104 c-560 -68 -1065 -385 -1390 -874 -191 -286 -300 -624
+-319 -985 -6 -111 -5 -124 15 -163 14 -28 34 -48 61 -62 39 -20 54 -20 2170
+-20 2116 0 2131 0 2170 20 27 14 47 34 61 62 20 39 21 52 15 163 -26 493 -214
+925 -556 1279 -324 335 -742 539 -1199 586 -151 15 -889 11 -1028 -6z m1012
+-294 c663 -76 1219 -543 1404 -1181 30 -101 61 -258 61 -305 l0 -24 -1940 0
+-1940 0 0 29 c0 54 41 242 74 345 109 332 317 618 603 831 102 76 328 192 458
+234 99 33 216 58 322 70 102 12 854 12 958 1z"/>
+</g>
+</svg>
+				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span  >
+						Coleta de Leads					</span>
+				</h3>
+									<p class="elementor-icon-box-description">
+						Obtenha informações sobre seus potenciais clientes. Isso é de grande valor para qualquer loja na internet. 					</p>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-f8d9e60" data-id="f8d9e60" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-b664a60 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="b664a60" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M2355 4973 c-356 -42 -595 -110 -875 -249 -698 -347 -1178 -1000
+-1311 -1785 -19 -112 -23 -172 -23 -369 -1 -261 11 -371 65 -590 83 -334 251
+-675 462 -936 31 -39 57 -74 57 -78 0 -3 -94 -6 -208 -6 -190 0 -210 -2 -225
+-18 -22 -24 -22 -75 1 -95 16 -14 55 -17 307 -17 160 0 298 0 307 0 10 0 27 9
+38 20 19 19 20 33 20 313 0 316 -3 334 -53 351 -22 8 -32 6 -55 -11 l-27 -20
+-5 -204 -5 -204 -48 59 c-232 285 -407 679 -472 1066 -22 129 -31 467 -16 600
+63 551 297 1025 697 1410 172 166 336 282 550 389 352 177 680 249 1088 238
+282 -7 483 -46 761 -148 104 -38 136 -36 155 10 25 61 -1 83 -164 140 -278 98
+-541 142 -831 140 -88 -1 -173 -4 -190 -6z"/>
+<path d="M2350 4280 c-638 -88 -1162 -518 -1366 -1123 -113 -335 -114 -711 -3
+-1049 42 -129 146 -335 226 -448 87 -121 262 -296 383 -383 113 -80 319 -185
+445 -226 276 -91 573 -108 855 -51 898 183 1480 1061 1299 1959 -70 347 -265
+685 -526 914 -221 193 -486 325 -778 387 -113 24 -421 35 -535 20z m140 -480
+l0 -340 -225 0 c-124 0 -225 2 -225 4 0 15 88 255 115 313 44 95 111 197 168
+255 48 50 131 108 154 108 10 0 13 -67 13 -340z m227 300 c92 -61 180 -177
+249 -324 26 -58 114 -297 114 -312 0 -2 -101 -4 -225 -4 l-225 0 0 340 c0 283
+2 340 14 340 7 0 40 -18 73 -40z m-523 -2 c-5 -7 -28 -40 -52 -73 -65 -87
+-162 -292 -207 -438 l-40 -127 -308 0 -308 0 33 46 c190 266 457 463 770 569
+115 39 122 40 112 23z m866 -30 c292 -102 537 -283 729 -538 22 -30 41 -58 41
+-62 0 -5 -136 -8 -302 -8 l-303 0 -44 137 c-49 152 -137 338 -204 429 -64 87
+-63 86 -30 78 15 -4 66 -20 113 -36z m-1200 -760 c0 -7 -7 -51 -15 -98 -18
+-103 -45 -371 -45 -452 l0 -58 -381 0 -382 0 7 82 c12 150 59 324 127 475 l28
+63 331 0 c257 0 330 -3 330 -12z m630 -298 l0 -310 -275 0 -275 0 0 63 c0 126
+48 519 67 550 2 4 112 7 244 7 l239 0 0 -310z m637 240 c22 -107 43 -283 50
+-420 l6 -130 -276 0 -277 0 0 310 0 310 242 -2 242 -3 13 -65z m820 13 c68
+-153 116 -335 129 -485 l7 -78 -379 0 -380 0 -12 173 c-10 151 -20 233 -48
+405 l-7 42 332 0 332 0 26 -57z m-2147 -760 c0 -114 24 -337 56 -525 l7 -38
+-332 0 -332 0 -30 65 c-65 144 -114 327 -125 473 l-7 82 382 0 381 0 0 -57z
+m690 -253 l0 -310 -242 2 -243 3 -17 90 c-22 115 -48 364 -48 455 l0 70 275 0
+275 0 0 -310z m687 180 c-7 -137 -28 -313 -50 -420 l-13 -65 -242 -3 -242 -2
+0 310 0 310 277 0 276 0 -6 -130z m899 48 c-11 -146 -60 -329 -125 -473 l-30
+-65 -332 0 -332 0 7 38 c32 188 56 411 56 525 l0 57 381 0 382 0 -7 -82z
+m-2133 -826 c54 -168 120 -305 201 -422 31 -44 52 -80 47 -80 -28 0 -189 58
+-280 101 -166 78 -290 166 -426 303 -66 67 -140 149 -163 184 l-43 62 308 0
+308 0 48 -148z m547 -192 c0 -229 -3 -340 -10 -340 -6 0 -27 9 -48 19 -132 68
+-266 272 -356 544 -20 59 -36 109 -36 112 0 3 101 5 225 5 l225 0 0 -340z
+m590 336 c0 -2 -16 -52 -36 -112 -91 -274 -223 -477 -356 -545 -21 -10 -42
+-19 -48 -19 -7 0 -10 111 -10 340 l0 340 225 0 c124 0 225 -2 225 -4z m718
+-58 c-23 -35 -97 -117 -163 -184 -129 -129 -243 -213 -398 -291 -81 -40 -277
+-113 -306 -113 -6 0 14 36 45 80 81 117 147 254 201 422 l48 148 308 0 308 0
+-43 -62z"/>
+<path d="M4175 4270 c-16 -18 -18 -44 -16 -327 2 -299 2 -309 22 -325 28 -24
+64 -23 89 2 19 19 20 34 20 223 l1 202 39 -45 c56 -63 169 -229 224 -329 127
+-230 211 -474 262 -756 26 -141 26 -565 1 -710 -91 -516 -311 -935 -678 -1290
+-122 -118 -196 -178 -336 -269 -295 -193 -638 -315 -1003 -357 -154 -17 -484
+-7 -629 21 -215 40 -372 89 -576 181 -72 33 -140 59 -153 59 -30 0 -62 -34
+-62 -65 0 -39 38 -67 165 -124 527 -234 1079 -282 1632 -140 487 124 961 432
+1274 826 348 438 529 956 529 1513 0 396 -79 728 -258 1090 -61 124 -199 338
+-281 435 l-50 60 209 5 c225 5 232 7 245 60 4 18 0 34 -15 53 l-21 27 -308 0
+c-294 0 -309 -1 -326 -20z"/>
+</g>
+</svg>
+				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span  >
+						Mensagem Clara					</span>
+				</h3>
+									<p class="elementor-icon-box-description">
+						Ao direcionar todo seu foco em uma única mensagem, ela se torna mais forte e seu poder de conversão de torna maior.					</p>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+		<div class="elementor-element elementor-element-8420245 e-con-boxed elementor-invisible e-con" data-id="8420245" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-19e5095 e-con-full e-con" data-id="19e5095" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-45696db elementor-align-center elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="45696db" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://wa.me/5521993648826?text=Olá,%20Pedro!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20você!" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">SOLICITAR ORÇAMENTO</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a548b92 elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="a548b92" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-00403bd" data-id="00403bd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-b3e16e2 elementor-widget__width-auto elementor-widget elementor-widget-heading" data-id="b3e16e2" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Ainda Tem Dúvida? Fale Com o Pedro</h2>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b996041" data-id="b996041" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-70b852f elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="70b852f" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f960148 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-invisible" data-id="f960148" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-735e01e" data-id="735e01e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f1b4dc8 elementor-widget elementor-widget-shortcode" data-id="f1b4dc8" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-shortcode">
+                <div class='gf_browser_unknown gform_wrapper gravity-theme' id='gform_wrapper_1' >
+                        <div class='gform_heading'>
+                            <h2 class="gform_title">Contato</h2>
+                            <span class='gform_description'></span>
+                        </div><form method='post' enctype='multipart/form-data'  id='gform_1'  action='/criacao-de-landing-pages-de-alta-conversao/' >
+                        <div class='gform_body gform-body'><div id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'><div id="field_1_1"  class="gfield gfield--width-half field_sublabel_below field_description_below gfield_visibility_visible"  data-js-reload="field_1_1"><label class='gfield_label' for='input_1_1' >Nome</label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_1_1' type='text' value='' class='large'      aria-invalid="false"   /> </div></div><div id="field_1_3"  class="gfield gfield--width-half field_sublabel_below field_description_below gfield_visibility_visible"  data-js-reload="field_1_3"><label class='gfield_label' for='input_1_3' >Whatsapp</label><div class='ginput_container ginput_container_text'><input name='input_3' id='input_1_3' type='text' value='' class='large'      aria-invalid="false"   /> </div></div><div id="field_1_4"  class="gfield gfield--width-half field_sublabel_below field_description_below gfield_visibility_visible"  data-js-reload="field_1_4"><label class='gfield_label' for='input_1_4' >Email</label><div class='ginput_container ginput_container_email'>
+                            <input name='input_4' id='input_1_4' type='text' value='' class='large'     aria-invalid="false"  />
+                        </div></div><fieldset id="field_1_5"  class="gfield gfield--width-half field_sublabel_below field_description_below gfield_visibility_visible"  data-js-reload="field_1_5"><legend class='gfield_label'  >Segmento</legend><div class='ginput_container ginput_container_radio'><div class='gfield_radio' id='input_1_5'>
+			<div class='gchoice gchoice_1_5_0'>
+					<input class='gfield-choice-input' name='input_5' type='radio' value='E-Commerce'  id='choice_1_5_0' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_5_0' id='label_1_5_0'>E-Commerce</label>
+			</div>
+			<div class='gchoice gchoice_1_5_1'>
+					<input class='gfield-choice-input' name='input_5' type='radio' value='Institucional'  id='choice_1_5_1' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_5_1' id='label_1_5_1'>Institucional</label>
+			</div>
+			<div class='gchoice gchoice_1_5_2'>
+					<input class='gfield-choice-input' name='input_5' type='radio' value='Landing Pages'  id='choice_1_5_2' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_5_2' id='label_1_5_2'>Landing Pages</label>
+			</div>
+			<div class='gchoice gchoice_1_5_3'>
+					<input class='gfield-choice-input' name='input_5' type='radio' value='Outros'  id='choice_1_5_3' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_5_3' id='label_1_5_3'>Outros</label>
+			</div></div></div></fieldset><div id="field_1_6"  class="gfield gfield--width-full field_sublabel_below field_description_below gfield_visibility_visible"  data-js-reload="field_1_6"><label class='gfield_label' for='input_1_6' >Descreva Seu Projeto</label><div class='ginput_container ginput_container_textarea'><textarea name='input_6' id='input_1_6' class='textarea large'      aria-invalid="false"   rows='10' cols='50'></textarea></div></div><div id="field_1_7"  class="gfield gform_validation_container field_sublabel_below field_description_below gfield_visibility_visible"  data-js-reload="field_1_7"><label class='gfield_label' for='input_1_7' >Comments</label><div class='ginput_container'><input name='input_7' id='input_1_7' type='text' value='' /></div><div class='gfield_description' id='gfield_description_1_7'>Este campo é para fins de validação e não deve ser alterado.</div></div></div></div>
+        <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' value='ENVIAR'  onclick='if(window["gf_submitting_1"]){return false;}  window["gf_submitting_1"]=true;  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_1"]){return false;} window["gf_submitting_1"]=true;  jQuery("#gform_1").trigger("submit",[true]); }' /> 
+            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_1' value='WyJ7XCI1XCI6W1wiYTc2Nzk0YWU3MjE1ODg0Zjg2YTgzY2JiOWY3YzBhZDFcIixcImFkMDM1Yzk3ZGYxZjBhMmFkY2E0ZmY3ZTVjZjI4NjFiXCIsXCI3ODAwOTUwZGEzZTZiNTNiNWY3NjQ1NDk3NDk0ZTY0M1wiLFwiMDM3ZDE0MTdhMGYyYmRlM2U0MmFmNWNhNThiZTEzZTVcIl19IiwiZWE3ZjBjYzBkMjNmZDY4Mzk1NWE3MWQwOTgyYzAyNmEiXQ==' />
+            <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+            <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div></div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+							</div>
+		
+		<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
+			<div class='footer-width-fixer'>		<div data-elementor-type="wp-post" data-elementor-id="124" class="elementor elementor-124">
+							<div class="elementor-element elementor-element-a8ca727 indice-ignorar e-con-boxed e-con" data-id="a8ca727" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-6392c71 e-con-full e-con" data-id="6392c71" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-3bd283e elementor-widget elementor-widget-image" data-id="3bd283e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://pmoraisdev.com.br">
+							<img width="500" height="500" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E" class="attachment-large size-large wp-image-23" alt="" data-lazy-srcset="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-BRANCA.png 500w, https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-BRANCA-300x300.png 300w, https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-BRANCA-150x150.png 150w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-BRANCA.png" /><noscript><img width="500" height="500" src="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-BRANCA.png" class="attachment-large size-large wp-image-23" alt="" srcset="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-BRANCA.png 500w, https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-BRANCA-300x300.png 300w, https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-BRANCA-150x150.png 150w" sizes="(max-width: 500px) 100vw, 500px" /></noscript>								</a>
+															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-d8b1430 e-con-full e-con" data-id="d8b1430" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-f698382 elementor-widget elementor-widget-heading" data-id="f698382" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Contato</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-83d1c95 elementor-align-left elementor-mobile-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="83d1c95" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="https://pmoraisdev.com.br/wp-content/uploads/elementor/css/custom-widget-icon-list.min.css?ver=1675191161">		<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://wa.me/21993648826?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20Pedro!">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-whatsapp"></i>						</span>
+										<span class="elementor-icon-list-text">(21) 9 9364 8826</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.instagram.com/pmoraisdev/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-instagram"></i>						</span>
+										<span class="elementor-icon-list-text">@pmoraisdev</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.facebook.com/pmoraisdev">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-facebook-f"></i>						</span>
+										<span class="elementor-icon-list-text">pmoraisdev</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="/cdn-cgi/l/email-protection#5a3935342e3b2e351a2a3735283b33293e3f2c74393537743828">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-envelope"></i>						</span>
+										<span class="elementor-icon-list-text"><span class="__cf_email__" data-cfemail="0a6965647e6b7e654a7a6765786b63796e6f7c24696567246878">[email&#160;protected]</span></span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://pmoraisdev.com.br/contato/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-signature"></i>						</span>
+										<span class="elementor-icon-list-text">Formulário de Contato</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-1acd5c1 e-con-full e-con" data-id="1acd5c1" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-c103053 elementor-widget elementor-widget-heading" data-id="c103053" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Links Importantes</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-f71d745 hfe-nav-menu__align-center hfe-nav-menu__breakpoint-none hfe-submenu-icon-arrow hfe-link-redirect-child elementor-widget elementor-widget-navigation-menu" data-id="f71d745" data-element_type="widget" data-settings="{&quot;padding_vertical_menu_item&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;padding_horizontal_menu_item&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:15,&quot;sizes&quot;:[]},&quot;padding_horizontal_menu_item_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_horizontal_menu_item_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_horizontal_menu_item_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_vertical_menu_item_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_vertical_menu_item_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_vertical_menu_item_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_space_between_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;menu_space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;dropdown_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;dropdown_border_radius_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;dropdown_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;dropdown_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;padding_horizontal_dropdown_item&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_horizontal_dropdown_item_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_horizontal_dropdown_item_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_horizontal_dropdown_item_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_vertical_dropdown_item&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:15,&quot;sizes&quot;:[]},&quot;padding_vertical_dropdown_item_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_vertical_dropdown_item_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;padding_vertical_dropdown_item_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;distance_from_menu&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;distance_from_menu_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;distance_from_menu_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;distance_from_menu_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_size&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_size_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_size_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_size_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_width&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_width_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_width_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_width_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_radius_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;toggle_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="navigation-menu.default">
+				<div class="elementor-widget-container">
+						<div class="hfe-nav-menu hfe-layout-vertical hfe-nav-menu-layout vertical" data-layout="vertical">
+				<div class="hfe-nav-menu__toggle elementor-clickable">
+					<div class="hfe-nav-menu-icon">
+											</div>
+				</div>
+				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-f71d745" class="hfe-nav-menu"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/criacao-de-ecommerce/" class = "hfe-menu-item">E-commerce</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item parent hfe-creative-menu"><a href="/criacao-de-landing-pages-de-alta-conversao/" class = "hfe-menu-item">Landing Pages</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/criacao-de-site-institucional/" class = "hfe-menu-item">Site Institucional</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/contato/" class = "hfe-menu-item">Contato</a></li>
+<li id="menu-item-1097" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="https://pmoraisdev.com.br/blog/" class = "hfe-menu-item">Blog</a></li>
+</ul></nav>              
+			</div>
+					</div>
+				</div>
+				</div>
+					</div>
+				</div>
+							</div>
+		</div>		</footer>
+	</div><!-- #page -->
+
+<div id="wws-layout-1" class="wws-popup-container wws-popup-container--position">
+
+			<div class="wws-gradient wws-gradient--position"></div>
+	
+	<!-- Popup -->
+	<div class="wws-popup" data-wws-popup-status="0">
+
+		<!-- Popup header -->
+		<div class="wws-popup__header">
+
+			<!-- Popup close button -->
+			<div class="wws-popup__close-btn wws-shadow wws--bg-color wws--text-color">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg>			</div>
+			<div class="wws-clearfix"></div>
+			<!-- .Popup close button -->
+
+		</div>
+		<!-- .Popup header -->
+
+		<!-- Popup body -->
+		<div class="wws-popup__body">
+
+			<!-- Popup support -->
+			<div class="wws-popup__support-wrapper">
+				<div class="wws-popup__support-img-wrapper wws-shadow">
+											<img class="wws-popup__support-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2050%2050'%3E%3C/svg%3E" alt="WeCreativez WhatsApp Support" width="50" height="50" data-lazy-src="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-AZUL_compressed.png"><noscript><img class="wws-popup__support-img" src="https://pmoraisdev.com.br/wp-content/uploads/2022/09/LOGO-AZUL_compressed.png" alt="WeCreativez WhatsApp Support" width="50" height="50"></noscript>
+									</div>
+				<div class="wws-popup__support wws-shadow">
+					<div class="wws-popup__support-about wws--text-color wws--bg-color">
+						Entre em contato através do Whatsapp que irei lhe responder o mais rápido possível					</div>
+					<div class="wws-popup__support-welcome">
+						Entre em contato com o Pedro					</div>
+									</div>
+			</div>
+			<!-- Popup support -->
+
+			<!-- Popup input -->
+			<div class="wws-popup__input-wrapper wws-shadow">
+				<input type="text" class="wws-popup__input" placeholder="FALA COMIGO" autocomplete="off">
+				<svg class="wws-popup__send-btn" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+					<style type="text/css">
+					.wws-lau00001{fill:#22c15e80;}
+					.wws-lau00002{fill:#22c15e;}
+					</style>
+					<path id="path0_fill" class="wws-lau00001" d="M38.9,19.8H7.5L2,39L38.9,19.8z"></path>
+					<path id="path0_fill_1_" class="wws-lau00002" d="M38.9,19.8H7.5L2,0.7L38.9,19.8z"></path>
+				</svg>
+			</div>
+			<div class="wws-clearfix"></div>
+			<!-- .Popup input -->
+
+		</div>
+		<!-- .Popup body -->
+
+	</div>
+	<!-- .Popup -->
+
+
+	<!-- .Popup footer -->
+	<div class="wws-popup__footer">
+
+		<!-- Popup open button -->
+		<div class="wws-popup__open-btn wws-shadow wws--text-color wws--bg-color">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg> <span>Olá! Como posso te ajudar?</span>
+		</div>
+		<div class="wws-clearfix"></div>
+		<!-- .Popup open button -->
+
+	</div>
+	<!-- Popup footer -->
+
+</div>
+<link rel='stylesheet' id='e-animations-css' href='https://pmoraisdev.com.br/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.10.2' media='all' />
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="rocketlazyloadscript" id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id='rocket-preload-links-js-extra'>
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/pmoraisdev.com.br","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script type="rocketlazyloadscript" id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0' id='hello-theme-frontend-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-includes/js/dist/dom-ready.min.js?ver=392bdd43726760d1f3ca' id='wp-dom-ready-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-includes/js/dist/hooks.min.js?ver=4169d3cf8e8d95a3d6d5' id='wp-hooks-js'></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-includes/js/dist/i18n.min.js?ver=9e794f35a71bb98672ae' id='wp-i18n-js'></script>
+<script type="rocketlazyloadscript" id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type="rocketlazyloadscript" id='wp-a11y-js-translations'>
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-01-08 13:50:14+0000","generator":"GlotPress\/4.0.0-alpha.4","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"pt_BR"},"Notifications":["Notifica\u00e7\u00f5es"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+</script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-includes/js/dist/a11y.min.js?ver=ecce20f002eda4c19664' id='wp-a11y-js' defer></script>
+<script type="rocketlazyloadscript" defer='defer' src='https://pmoraisdev.com.br/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.6.9' id='gform_masked_input-js'></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/wordpress-whatsapp-support/assets/libraries/inputmask/jquery.inputmask.min.js?ver=5.0.6' id='wws-input-mask-js' defer></script>
+<script id='wws-public-script-js-extra'>
+var wwsObj = {"support_number":"5521993648826","auto_popup":"yes","auto_popup_time":"5","plugin_url":"https:\/\/pmoraisdev.com.br\/wp-content\/plugins\/wordpress-whatsapp-support\/","is_mobile":"0","current_page_id":"319","current_page_url":"https:\/\/pmoraisdev.com.br\/criacao-de-landing-pages-de-alta-conversao\/","popup_layout":"1","group_invitation_id":"XYZ12345678","admin_url":"https:\/\/pmoraisdev.com.br\/wp-admin\/admin-ajax.php?ver=6578ca89586e1","scroll_lenght":"","pre_defined_text":"","is_debug":"no","fb_ga_click_tracking":"{\"fb_click_tracking_status\":\"no\",\"fb_click_tracking_event_name\":\"Chat started\",\"fb_click_tracking_event_label\":\"Support\",\"ga_click_tracking_status\":\"no\",\"ga_click_tracking_event_name\":\"Button Clicked\",\"ga_click_tracking_event_category\":\"WordPress WhatsApp Support\",\"ga_click_tracking_event_label\":\"Support\"}","is_gdpr":"no","numberMasking":"(99) 99999-9999","whatsapp_mobile_api":"https:\/\/api.whatsapp.com","whatsapp_desktop_api":"https:\/\/web.whatsapp.com","version":"2.3.3","security_token":"17180793c2"};
+</script>
+<script type="rocketlazyloadscript" data-minify="1" src='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/wordpress-whatsapp-support/assets/js/wws-public-script.js?ver=1682345294' id='wws-public-script-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" src='https://pmoraisdev.com.br/wp-content/cache/min/1/wp-content/plugins/header-footer-elementor/inc/js/frontend.js?ver=1682345294' id='hfe-frontend-js-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.10.3' id='elementor-pro-webpack-runtime-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.10.2' id='elementor-webpack-runtime-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.10.2' id='elementor-frontend-modules-js' defer></script>
+<script type="rocketlazyloadscript" id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/pmoraisdev.com.br\/wp-admin\/admin-ajax.php","nonce":"55d5d93423","urls":{"assets":"https:\/\/pmoraisdev.com.br\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/pmoraisdev.com.br\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/pmoraisdev.com.br\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.10.3' id='elementor-pro-frontend-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2' id='jquery-ui-core-js' defer></script>
+<script type="rocketlazyloadscript" id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Celular","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Celular extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":true},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.10.2","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"a11y_improvements":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"container":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"landing-pages":true,"kit-elements-defaults":true,"page-transitions":true,"notes":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/pmoraisdev.com.br\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet","viewport_laptop"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":319,"title":"Cria%C3%A7%C3%A3o%20de%20Landing%20Pages%20de%20Alta%20Convers%C3%A3o%20-%20PMoraisDev","excerpt":"","featuredImage":false}};
+</script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.10.2' id='elementor-frontend-js' defer></script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.10.3' id='pro-elements-handlers-js' defer></script>
+<script id='upk-site-js-extra'>
+var UltimatePostKitConfig = {"ajaxurl":"https:\/\/pmoraisdev.com.br\/wp-admin\/admin-ajax.php","nonce":"4419ad527f","mailchimp":{"subscribing":"Subscribing you please wait..."},"elements_data":{"sections":[],"columns":[],"widgets":[]}};
+</script>
+<script type="rocketlazyloadscript" src='https://pmoraisdev.com.br/wp-content/plugins/ultimate-post-kit/assets/js/upk-site.min.js?ver=3.3.0' id='upk-site-js' defer></script>
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 1) {jQuery('#input_1_3').mask('(99) 9 9999 - 9999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+});</script>
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+gform.initializeOnLoaded( function() { jQuery(document).trigger('gform_post_render', [1, 1]) } );
+});</script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://pmoraisdev.com.br/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script><script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
+</html> 
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1702414985 -->
